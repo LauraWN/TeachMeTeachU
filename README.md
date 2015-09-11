@@ -20,6 +20,7 @@ It provides an "animated" effect to web sites, giving a flat two-dimensional sur
 It assigns variables to the foreground and backround pieces of a web site and allows you to move them separately.
 
 <b>Why does one use it?</b>
+
 It provides some interest to ordinary bullet points and exposition on a web site and can enhance a web user's experience on a web page.
 
 <b>What are the alternatives?</b>
@@ -53,7 +54,8 @@ The World Wide Web Consortium (W3C) works on the specifications for cascading st
 <b>What article or forum was most helpful to you in learning this?</b>
 
 http://keithclark.co.uk/articles/pure-css-parallax-websites/ (This website provides an excellent step-by-step guide to creating parallax scrolling).
-http://keithclark.co.uk/articles/pure-css-parallax-websites/demo3/ (This part of his site is especially noteworthy when you click the Debug box in the upper right corner of the page to see the many layers at an angle.)
+
+http://keithclark.co.uk/articles/pure-css-parallax-websites/demo3/ (This part of his site is especially noteworthy when you click the Debug box in the upper left corner of the page to see the many layers at an angle.)
 
 <b>What are 3 interview questions one might be asked about this technology?<b>
 
