@@ -1,28 +1,186 @@
-.parallax {
-  perspective: 1px;
-  height: 100vh;
-  overflow-x: hidden;
-/*  Setting "overflow-y: auto" lets the content inside the element to scroll in the usual way, but now descendant elements will be rendered relative to the fixed perspective. This is the key to creating the parallax effect.*/
-  overflow-y: auto;
-}
-
-.parallax__layer {
+.bg {
   position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0px;
+  z-index: 0;
+  background-color: #ffe4c7;
+}
+.layer {
+  position: fixed;
+  top: 0px;
+  margin: auto;
+  width: 100%;
+  z-index: 100;
+  min-height: 400px;
   top: 0;
+  left: 0;
   right: 0;
   bottom: 0;
-  left: 0;
+  background-position: top center;
+  background-repeat: no-repeat;
 }
 
-.parallax__layer--base {
-  transform: translateZ(0);
-}
-.parallax__layer--back {
-  transform: translateZ(-1px) scale(2);
+.parallax {
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  -webkit-perspective: 1px;
+          perspective: 1px;
 }
 
-.parallax__group {
+.parallax-group {
   position: relative;
   height: 100vh;
-  transform-style: preserve-3d;
+  /*transform-style: preserve-3d prevents the browser from flattening the elements.*/
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+}
+
+.parallax-group div:nth-child(1) {
+  background-color: #ffe4c7;
+  margin-top: 600px;
+  background-color: #d8d1b8;
+  -webkit-transform: translateZ(-12px) scale(13);
+          transform: translateZ(-12px) scale(13);
+}
+/*the translatez is what controls the speed of the scrolling.*/
+
+.parallax-group div:nth-child(1):before {
+  content: "";
+  width: 100%;
+  height: 200px;
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  background-image: -webkit-linear-gradient(315deg, transparent 66%, #d8d1b8 66.01%), -webkit-linear-gradient(45deg, #d8d1b8 34%, transparent 34.01%);
+  background-image: linear-gradient(135deg, transparent 66%, #d8d1b8 66.01%), linear-gradient(45deg, #d8d1b8 34%, transparent 34.01%);
+  background-position: 122px 0px;
+  background-size: 200px 100%;
+  background-repeat: repeat-x;
+}
+
+.parallax-group div:nth-child(2) {
+  background-color: #ffe4c7;
+  margin-top: 900px;
+  background-color: #b2bea9;
+  -webkit-transform: translateZ(-10px) scale(11);
+          transform: translateZ(-10px) scale(11);
+}
+.parallax-group div:nth-child(2):before {
+  content: "";
+  width: 100%;
+  height: 200px;
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  background-image: -webkit-linear-gradient(315deg, transparent 66%, #b2bea9 66.01%), -webkit-linear-gradient(45deg, #b2bea9 34%, transparent 34.01%);
+  background-image: linear-gradient(135deg, transparent 66%, #b2bea9 66.01%), linear-gradient(45deg, #b2bea9 34%, transparent 34.01%);
+  background-position: 38px 0px;
+  background-size: 200px 100%;
+  background-repeat: repeat-x;
+}
+
+.parallax-group div:nth-child(3) {
+  background-color: #ffe4c7;
+  margin-top: 1200px;
+  background-color: #8cab9b;
+  -webkit-transform: translateZ(-8px) scale(9);
+          transform: translateZ(-8px) scale(9);
+}
+.parallax-group div:nth-child(3):before {
+  content: "";
+  width: 100%;
+  height: 200px;
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  background-image: -webkit-linear-gradient(315deg, transparent 66%, #8cab9b 66.01%), -webkit-linear-gradient(45deg, #8cab9b 34%, transparent 34.01%);
+  background-image: linear-gradient(135deg, transparent 66%, #8cab9b 66.01%), linear-gradient(45deg, #8cab9b 34%, transparent 34.01%);
+  background-position: 180px 0px;
+  background-size: 200px 100%;
+  background-repeat: repeat-x;
+}
+
+.parallax-group div:nth-child(4) {
+  background-color: #ffe4c7;
+  margin-top: 1500px;
+  background-color: #66988c;
+  -webkit-transform: translateZ(-6px) scale(7);
+          transform: translateZ(-6px) scale(7);
+}
+.parallax-group div:nth-child(4):before {
+  content: "";
+  width: 100%;
+  height: 200px;
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  background-image: -webkit-linear-gradient(315deg, transparent 66%, #66988c 66.01%), -webkit-linear-gradient(45deg, #66988c 34%, transparent 34.01%);
+  background-image: linear-gradient(135deg, transparent 66%, #66988c 66.01%), linear-gradient(45deg, #66988c 34%, transparent 34.01%);
+  background-position: 51px 0px;
+  background-size: 200px 100%;
+  background-repeat: repeat-x;
+}
+
+.parallax-group div:nth-child(5) {
+  background-color: #ffe4c7;
+  margin-top: 1800px;
+  background-color: #3f857e;
+  -webkit-transform: translateZ(-4px) scale(5);
+          transform: translateZ(-4px) scale(5);
+}
+.parallax-group div:nth-child(5):before {
+  content: "";
+  width: 100%;
+  height: 200px;
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  background-image: -webkit-linear-gradient(315deg, transparent 66%, #3f857e 66.01%), -webkit-linear-gradient(45deg, #3f857e 34%, transparent 34.01%);
+  background-image: linear-gradient(135deg, transparent 66%, #3f857e 66.01%), linear-gradient(45deg, #3f857e 34%, transparent 34.01%);
+  background-position: 207px 0px;
+  background-size: 200px 100%;
+  background-repeat: repeat-x;
+}
+
+.parallax-group div:nth-child(6) {
+  background-color: #ffe4c7;
+  margin-top: 2100px;
+  background-color: #19726f;
+  -webkit-transform: translateZ(-2px) scale(3);
+          transform: translateZ(-2px) scale(3);
+}
+.parallax-group div:nth-child(6):before {
+  content: "";
+  width: 100%;
+  height: 200px;
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  background-image: -webkit-linear-gradient(315deg, transparent 66%, #19726f 66.01%), -webkit-linear-gradient(45deg, #19726f 34%, transparent 34.01%);
+  background-image: linear-gradient(135deg, transparent 66%, #19726f 66.01%), linear-gradient(45deg, #19726f 34%, transparent 34.01%);
+  background-position: 9px 0px;
+  background-size: 200px 100%;
+  background-repeat: repeat-x;
+}
+
+.content {
+  position: relative;
+  background-color: transparent;
+  letter-spacing: 10px;
+  text-transform: uppercase;
+  line-height: 40px;
+  z-index: 10;
+  width: 100%;
+  font-size: 15px;
+  text-align: center;
+  color: white;
+  margin-top: 1000px;
+  -webkit-transform: translateZ(-2px) scale(3);
+          transform: translateZ(-2px) scale(3);
+}
+
+.fill {
+  height: 80%;
 }
