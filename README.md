@@ -1,8 +1,6 @@
 # TeachMeTeachU
 Greetings!
 
-Answer the following questions regarding your subject. No need to write a book!
-
 <b>Why did you choose this subject?</b>
 
 Have you ever wondered how web developers make those nifty scrolling web sites? Have you ever wondered why people answer a question with a question? The answer to the first question is "Yes! I have always wondered about those nifty scrolling web sites!" The answer to the second question is unknown.

@@ -1,0 +1,28 @@
+.parallax {
+  perspective: 1px;
+  height: 100vh;
+  overflow-x: hidden;
+/*  Setting "overflow-y: auto" lets the content inside the element to scroll in the usual way, but now descendant elements will be rendered relative to the fixed perspective. This is the key to creating the parallax effect.*/
+  overflow-y: auto;
+}
+
+.parallax__layer {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.parallax__layer--base {
+  transform: translateZ(0);
+}
+.parallax__layer--back {
+  transform: translateZ(-1px) scale(2);
+}
+
+.parallax__group {
+  position: relative;
+  height: 100vh;
+  transform-style: preserve-3d;
+}
