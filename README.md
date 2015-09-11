@@ -55,7 +55,7 @@ http://keithclark.co.uk/articles/pure-css-parallax-websites/ (This website provi
 
 http://keithclark.co.uk/articles/pure-css-parallax-websites/demo3/ (This part of his site is especially noteworthy when you click the Debug box in the upper left corner of the page to see the many layers at an angle.)
 
-<b>What are 3 interview questions one might be asked about this technology?<b>
+<b>What are 3 interview questions one might be asked about this technology?</b>
 
 When would you consider using parallax in the design of a web site?
 What are some disadvantages of using parallax?
